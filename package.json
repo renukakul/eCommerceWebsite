@@ -1,0 +1,18 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Appliation built with the MERN stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix ./frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Renuka",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
