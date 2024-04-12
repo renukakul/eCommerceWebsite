@@ -17,7 +17,7 @@ import Rating from "../components/Rating";
 import { useGetProductDetailsQuery } from "../slices/productAPISlice";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
-import { addToCart } from "../slices/"
+import { addToCart } from "../slices/cartSlice"
 // import products from "../products-and-images/products";
 
 // import axios from 'axios';
