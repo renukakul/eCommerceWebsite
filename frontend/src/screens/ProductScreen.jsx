@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import Rating from "../components/Rating"; 
 
-import { useGetProductDetailsQuery } from '../slices/productSlice';
+import { useGetProductDetailsQuery } from '../slices/productAPISlice';
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 // import products from "../products-and-images/products";
