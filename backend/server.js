@@ -6,8 +6,9 @@ const port = process.env.PORT || 5000;
 import connectDB from './config/db.js'
 // import products from './data/products.js';
 import productRoutes from './routes/productRoutes.js';
-import { notFound, errorHandler } from './middleware/errorMiddlerware.js';
+import userRoutes from './routes/userRoutes.js'
 
+import { notFound, errorHandler } from './middleware/errorMiddlerware.js';
 connectDB();
 const app = express();
 
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/products', productRoutes);
+app.use('/api/users', userRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
