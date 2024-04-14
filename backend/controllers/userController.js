@@ -15,7 +15,16 @@ const registerUser = asyncHandler(async (req, res) => {
   res.send('register user');
 });
 
-// @desc    Get user profile
+// @desc    Logout User / clear cookie
+// @route   POST /api/users
+// @access  Public
+const logoutUser = asyncHandler(async (req, res) => {
+  res.send('logout user');
+});
+
+
+
+//  @desc    Get user profile
 // @route   GET /api/users/profile
 // @access  Private
 const getUserProfile = asyncHandler(async (req, res) => {
@@ -60,6 +69,7 @@ const updateUser = asyncHandler(async (req, res) => {
 export {
   authUser,
   registerUser,
+  logoutUser,
   getUserProfile,
   updateUserProfile,
   getUsers,
