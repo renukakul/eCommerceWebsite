@@ -1,4 +1,5 @@
 import express from 'express';
+import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 dotenv.config();
 const port = process.env.PORT || 5000;
@@ -11,6 +12,11 @@ import userRoutes from './routes/userRoutes.js'
 import { notFound, errorHandler } from './middleware/errorMiddlerware.js';
 connectDB();
 const app = express();
+
+//Body Parser middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 app.get('/', (req, res) => {
     res.send("API is Running...")
