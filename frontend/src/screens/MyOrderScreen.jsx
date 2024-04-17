@@ -12,7 +12,7 @@ import {
   useGetPaypalClientIdQuery,
 } from '../slices/orderApiSlice';
 
-const OrderScreen = () => {
+const MyOrderScreen = () => {
   const { id: orderId } = useParams();
 
   const {
@@ -207,12 +207,12 @@ const OrderScreen = () => {
                     <Loader />
                   ) : (
                     <div>
-                      <Button
+                      {/* <Button
                         style={{ marginBottom: '10px' }}
                         onClick={onApproveTest}
                       >
                         Test Pay Order
-                      </Button>
+                      </Button> */}
 
                       <div>
                         <PayPalButtons
@@ -233,4 +233,4 @@ const OrderScreen = () => {
     </>
   );
 };
-export default OrderScreen;
+export default MyOrderScreen;
