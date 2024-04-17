@@ -6,6 +6,9 @@ const port = process.env.PORT || 5000;
 
 import connectDB from './config/db.js'
 // import products from './data/products.js';
+
+
+
 import productRoutes from './routes/productRoutes.js';
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
@@ -22,6 +25,10 @@ app.use(cookieParser());
 app.get('/', (req, res) => {
     res.send("API is Running...")
 });
+app.get('/api/config/paypal', (req, res) =>
+  res.send({ clientId: process.env.PAYPAL_CLIENT_ID })
+);
+
 
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
