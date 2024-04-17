@@ -11,7 +11,7 @@ import {
   useDeliverOrderMutation,
   usePayOrderMutation,
   useGetPaypalClientIdQuery,
-} from '../slices/orderApiSlice';
+} from '../slices/ordersApiSlice';
 
 const MyOrderScreen = () => {
   const { id: orderId } = useParams();

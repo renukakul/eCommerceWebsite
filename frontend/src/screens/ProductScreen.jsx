@@ -14,7 +14,7 @@ import {
 } from "react-bootstrap";
 import Rating from "../components/Rating";
 
-import { useGetProductDetailsQuery } from "../slices/productAPISlice";
+import { useGetProductDetailsQuery } from "../slices/productsApiSlice";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import { addToCart } from "../slices/cartSlice"
