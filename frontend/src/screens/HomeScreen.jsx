@@ -12,6 +12,7 @@ const HomeScreen = () => {
   console.log(pageNumber);
 
   const { data, isLoading, error } = useGetProductsQuery({
+    keyword,
     pageNumber,
   });
 
