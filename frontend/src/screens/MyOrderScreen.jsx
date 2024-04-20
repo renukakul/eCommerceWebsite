@@ -70,6 +70,7 @@ const MyOrderScreen = () => {
     });
   }
 
+  // TESTING ONLY! REMOVE BEFORE PRODUCTION
   async function onApproveTest() {
     await payOrder({ orderId, details: { payer: {} } });
     refetch();
@@ -94,6 +95,7 @@ const MyOrderScreen = () => {
         return orderID;
       });
   }
+
   const deliverHandler = async () => {
     await deliverOrder(orderId);
     refetch();
@@ -102,7 +104,7 @@ const MyOrderScreen = () => {
   return isLoading ? (
     <Loader />
   ) : error ? (
-    <Message variant='danger'>{error}</Message>
+    <Message variant='danger'>{error.data.message}</Message>
   ) : (
     <>
       <h1>Order {order._id}</h1>
@@ -132,6 +134,7 @@ const MyOrderScreen = () => {
                 <Message variant='danger'>Not Delivered</Message>
               )}
             </ListGroup.Item>
+
             <ListGroup.Item>
               <h2>Payment Method</h2>
               <p>
@@ -144,6 +147,7 @@ const MyOrderScreen = () => {
                 <Message variant='danger'>Not Paid</Message>
               )}
             </ListGroup.Item>
+
             <ListGroup.Item>
               <h2>Order Items</h2>
               {order.orderItems.length === 0 ? (
@@ -215,12 +219,13 @@ const MyOrderScreen = () => {
                     <Loader />
                   ) : (
                     <div>
-                      {/* <Button
+                      {/* THIS BUTTON IS FOR TESTING! REMOVE BEFORE PRODUCTION! */}
+                      <Button
                         style={{ marginBottom: '10px' }}
                         onClick={onApproveTest}
                       >
                         Test Pay Order
-                      </Button> */}
+                      </Button>
 
                       <div>
                         <PayPalButtons
@@ -233,7 +238,6 @@ const MyOrderScreen = () => {
                   )}
                 </ListGroup.Item>
               )}
-              {/* {MARK AS DELIVERED PLACEHOLDER} */}
 
               {loadingDeliver && <Loader />}
 
@@ -257,5 +261,6 @@ const MyOrderScreen = () => {
       </Row>
     </>
   );
+
 };
 export default MyOrderScreen;
