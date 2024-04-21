@@ -10,12 +10,16 @@ const ShippingScreen = () => {
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
 
-  const [address, setAddress] = useState(shippingAddress.address || '');
-  const [city, setCity] = useState(shippingAddress.city || '');
-  const [postalCode, setPostalCode] = useState(
-    shippingAddress.postalCode || ''
-  );
-  const [country, setCountry] = useState(shippingAddress.country || '');
+  // Initialize state with default values or empty strings
+  const initialAddress = shippingAddress ? shippingAddress.address : '';
+  const initialCity = shippingAddress ? shippingAddress.city : '';
+  const initialPostalCode = shippingAddress ? shippingAddress.postalCode : '';
+  const initialCountry = shippingAddress ? shippingAddress.country : '';
+
+  const [address, setAddress] = useState(initialAddress);
+  const [city, setCity] = useState(initialCity);
+  const [postalCode, setPostalCode] = useState(initialPostalCode);
+  const [country, setCountry] = useState(initialCountry);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -39,7 +43,7 @@ const ShippingScreen = () => {
             value={address}
             required
             onChange={(e) => setAddress(e.target.value)}
-          ></Form.Control>
+          />
         </Form.Group>
 
         <Form.Group className='my-2' controlId='city'>
@@ -50,7 +54,7 @@ const ShippingScreen = () => {
             value={city}
             required
             onChange={(e) => setCity(e.target.value)}
-          ></Form.Control>
+          />
         </Form.Group>
 
         <Form.Group className='my-2' controlId='postalCode'>
@@ -61,7 +65,7 @@ const ShippingScreen = () => {
             value={postalCode}
             required
             onChange={(e) => setPostalCode(e.target.value)}
-          ></Form.Control>
+          />
         </Form.Group>
 
         <Form.Group className='my-2' controlId='country'>
@@ -72,7 +76,7 @@ const ShippingScreen = () => {
             value={country}
             required
             onChange={(e) => setCountry(e.target.value)}
-          ></Form.Control>
+          />
         </Form.Group>
 
         <Button type='submit' variant='primary'>
