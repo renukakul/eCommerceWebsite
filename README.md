@@ -8,7 +8,7 @@ To check website click on the Link Below-
 [Click Here ](https://ecommercewebsite-2-gtsj.onrender.com)
 
 <!-- toc -->
- [Features](#features)
+- [Features](#features)
 - [Usage](#usage)
   - [Env Variables](#env-variables)
   - [Install Dependencies (frontend & backend)](#install-dependencies-frontend--backend)
@@ -105,3 +105,6 @@ jane@email.com (Customer)
 ```
 
 ---
+
+## License
+permissive MIT license for the main library
