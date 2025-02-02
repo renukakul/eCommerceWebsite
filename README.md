@@ -8,15 +8,13 @@ To check website click on the Link Below-
 [Click Here ](https://ecommercewebsite-2-gtsj.onrender.com)
 
 <!-- toc -->
-- [eCommerceWebsite](#ecommercewebsite)
-- [eCommerce Platform using Redux Toolkit | MERN Stack](#ecommerce-platform-using-redux-toolkit--mern-stack)
-  - [Features](#features)
-  - [Usage](#usage)
-    - [Env Variables](#env-variables)
-    - [Install Dependencies (frontend \& backend)](#install-dependencies-frontend--backend)
-    - [Run](#run)
-  - [Build \& Deploy](#build--deploy)
-    - [Seed Database](#seed-database)
+- [Features](#features)
+- [Usage](#usage)
+  - [Env Variables](#env-variables)
+  - [Install Dependencies (frontend & backend)](#install-dependencies-frontend--backend)
+  - [Run](#run)
+- [Build & Deploy](#build--deploy)
+  - [Seed Database](#seed-database)
 
 
 
@@ -108,3 +106,6 @@ jane@email.com (Customer)
 ```
 
 ---
+
+## License
+permissive MIT license for the main library
